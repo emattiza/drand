@@ -2,7 +2,7 @@
   description = "A simple Go package";
 
   # Nixpkgs / NixOS version to use.
-  inputs.nixpkgs.url = "nixpkgs/nixos-21.11";
+  inputs.nixpkgs.url = "nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:
     let
@@ -47,6 +47,7 @@
             # To begin with it is recommended to set this, but one must
             # remeber to bump this hash when your dependencies change.
             vendorSha256 = pkgs.lib.fakeSha256;
+            modSha256 = pkgs.lib.fakeSha256;
 
             # vendorSha256 = "sha256-pQpattmS9VmO3ZIQUFn66az8GSmB4IvYhTTCFn6SUmo=";
           };
